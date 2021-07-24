@@ -1,21 +1,28 @@
 import React from 'react';
-import { Image, StyleSheet, Text, View } from 'react-native';
+import { Alert, Image, StyleSheet, Text, View } from 'react-native';
+
+import { DefaultButton } from './src/components';
 
 import { colors } from './src/utils/theme';
-import { DEVICE_HEIGHT, DEVICE_WIDTH } from './src/utils/dimensions';
+import { DEVICE_WIDTH } from './src/utils/dimensions';
+
+const showAlert = () => {
+  Alert.alert('Hola !!!');
+};
 
 const App = () => {
-  console.log('Device height -> ', DEVICE_HEIGHT);
-  console.log('Device width -> ', DEVICE_WIDTH);
+  //console.log('Device height -> ', DEVICE_HEIGHT);
+  //console.log('Device width -> ', DEVICE_WIDTH);
   return (
     <View style={styles.mainContainer}>
-      <Text style={styles.title}>Título</Text>
-      <Text>Subtitulo</Text>
+      <Text style={styles.title}>Hola Mundo!!</Text>
+      <Text style={styles.subtitle}>Laura Murillo</Text>
       <Image
         source={{ uri: 'https://reactnative.dev/img/tiny_logo.png' }}
         style={styles.image}
         resizeMode="contain"
       />
+      <DefaultButton onPress={showAlert} msg={'Hola'} />
     </View>
   );
 };
@@ -30,16 +37,21 @@ const styles = StyleSheet.create({
   },
   title: {
     color: colors.mainOrange,
-    fontSize: 30,
+    fontSize: 50,
     fontWeight: 'bold',
     fontStyle: 'italic',
+    marginTop: 100,
     marginBottom: 10,
   },
   image: {
-    aspectRatio: 1,
     minHeight: 100,
     width: DEVICE_WIDTH * 0.5,
+    marginTop: 100,
   },
+  subtitle: {
+    color: 'white',
+    fontSize: 25,
+  }
 });
 
 export default App;
