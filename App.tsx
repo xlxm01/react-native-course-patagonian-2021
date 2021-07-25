@@ -1,14 +1,22 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
-
-const hola = { background: 'blue', heigh: 100, width: 100 };
+import { StyleSheet, Text, View } from 'react-native';
 
 const App = () => {
-  return <View style={hola} />;
+    return (
+      <View style={styles.mainContainer}>
+        <Text>LAURA MURILLO</Text>
+      </View>
+    );
 };
 
-const style = StyleSheet.create({
-
+const styles = StyleSheet.create({
+  mainContainer: {
+    alignItems: 'center',
+    backgroundColor: '#ffe4e1',
+    flex: 1,
+    justifyContent: 'center',
+    width: '100%',
+  }
 });
 
 export default App;
