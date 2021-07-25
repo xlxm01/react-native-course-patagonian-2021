@@ -1,13 +1,13 @@
 import { StyleSheet } from 'react-native';
+
 import { colors } from '../../utils/theme';
 
 const styles = StyleSheet.create({
-  MainContainer: {
+  mainContainer: {
     alignItems: 'center',
-    height: 50,
-    backgroundColor: colors.mainOrange,
-    borderRadius: 10,
     justifyContent: 'center',
+    backgroundColor: colors.mainOrange,
+    height: 50,
     marginTop: 10,
     width: '80%',
   },

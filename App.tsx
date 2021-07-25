@@ -7,22 +7,20 @@ import { colors } from './src/utils/theme';
 import { DEVICE_WIDTH } from './src/utils/dimensions';
 
 const showAlert = () => {
-  Alert.alert('Hola !!!');
+  Alert.alert('Hola!');
 };
 
 const App = () => {
-  //console.log('Device height -> ', DEVICE_HEIGHT);
-  //console.log('Device width -> ', DEVICE_WIDTH);
   return (
     <View style={styles.mainContainer}>
-      <Text style={styles.title}>Hola Mundo!!</Text>
-      <Text style={styles.subtitle}>Laura Murillo</Text>
+      <Text style={styles.title}>Título</Text>
+      <Text>Subtitulo</Text>
       <Image
         source={{ uri: 'https://reactnative.dev/img/tiny_logo.png' }}
         style={styles.image}
         resizeMode="contain"
       />
-      <DefaultButton onPress={showAlert} msg={'Hola'} />
+      <DefaultButton onPress={showAlert} />
     </View>
   );
 };
@@ -37,21 +35,16 @@ const styles = StyleSheet.create({
   },
   title: {
     color: colors.mainOrange,
-    fontSize: 50,
+    fontSize: 30,
     fontWeight: 'bold',
     fontStyle: 'italic',
-    marginTop: 100,
     marginBottom: 10,
   },
   image: {
+    aspectRatio: 1,
     minHeight: 100,
     width: DEVICE_WIDTH * 0.5,
-    marginTop: 100,
   },
-  subtitle: {
-    color: 'white',
-    fontSize: 25,
-  }
 });
 
 export default App;

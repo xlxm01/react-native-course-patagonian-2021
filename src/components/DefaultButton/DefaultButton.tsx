@@ -5,13 +5,12 @@ import styles from './styles';
 
 interface Props {
   onPress: () => void;
-  msg: string;
 }
 
-const DefaultButton = ({ onPress, msg }: Props) => {
+const DefaultButton = ({ onPress }: Props) => {
   return (
-    <TouchableOpacity onPress={onPress} style={styles.MainContainer}>
-      <Text>{msg}</Text>
+    <TouchableOpacity style={styles.mainContainer} onPress={onPress}>
+      <Text>Hola</Text>
     </TouchableOpacity>
   );
 };
