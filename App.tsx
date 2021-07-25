@@ -1,5 +1,7 @@
 import React from 'react';
-import { Alert, Button, Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Alert, Image, StyleSheet, Text, View } from 'react-native';
+
+import { DefaultBotton } from './src/components';
 
 import { colors } from './src/utils/theme';
 import { DEVICE_WIDTH, DEVICE_HEIGH } from './src/utils/dimensions';
@@ -14,9 +16,7 @@ const App = () => {
       <Text style={styles.title}>LAURA MURILLO</Text>
       <Image style={styles.logo} resizeMode='contain' source={{ uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgTmNUH9WwaxR9MplaF9ko2Z3rWkTiGYwDGR0kMKeZ7zr7adktK0aiQgJmMb_lVBk0m84&usqp=CAU' }} />
       <Text style={styles.subtitle}>Team Leader</Text>
-      <TouchableOpacity onPress={showAlert}>
-        <Text> Mas Info </Text>
-      </TouchableOpacity>
+      <DefaultBotton onPress={showAlert}></DefaultBotton>
     </View>
   );
 };
@@ -46,10 +46,6 @@ const styles = StyleSheet.create({
     minHeight: 170,
     marginTop: 15,
     width: DEVICE_WIDTH * 0.5,
-  },
-  boton: {
-    color: colors.mainBoton,
-    marginTop: 20,
   },
 });
 
