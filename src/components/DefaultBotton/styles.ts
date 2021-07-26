@@ -1,6 +1,6 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet } from 'react-native';
 
-import {colors} from '../../utils/theme';
+import { colors } from '../../utils/theme';
 
 const styles = StyleSheet.create({
   mainContainer: {
@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
     height: 40,
     justifyContent: 'center',
     width: '30%',
-  }
+  },
 });
 
 export default styles;

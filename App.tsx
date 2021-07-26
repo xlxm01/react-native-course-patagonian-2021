@@ -4,19 +4,25 @@ import { Alert, Image, StyleSheet, Text, View } from 'react-native';
 import { DefaultBotton } from './src/components';
 
 import { colors } from './src/utils/theme';
-import { DEVICE_WIDTH, DEVICE_HEIGH } from './src/utils/dimensions';
+import { DEVICE_WIDTH } from './src/utils/dimensions';
 
 const showAlert = () => {
-  Alert.alert('Título','Licenciada en Analisis de Sistemas');
+  Alert.alert('Título', 'Licenciada en Analisis de Sistemas');
 };
 
 const App = () => {
   return (
     <View style={styles.mainContainer}>
       <Text style={styles.title}>LAURA MURILLO</Text>
-      <Image style={styles.logo} resizeMode='contain' source={{ uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgTmNUH9WwaxR9MplaF9ko2Z3rWkTiGYwDGR0kMKeZ7zr7adktK0aiQgJmMb_lVBk0m84&usqp=CAU' }} />
+      <Image
+        style={styles.logo}
+        resizeMode="contain"
+        source={{
+          uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgTmNUH9WwaxR9MplaF9ko2Z3rWkTiGYwDGR0kMKeZ7zr7adktK0aiQgJmMb_lVBk0m84&usqp=CAU',
+        }}
+      />
       <Text style={styles.subtitle}>Team Leader</Text>
-      <DefaultBotton onPress={showAlert}></DefaultBotton>
+      <DefaultBotton onPress={showAlert} />
     </View>
   );
 };
