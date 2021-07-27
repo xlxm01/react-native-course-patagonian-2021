@@ -1,4 +1,6 @@
 export const colors = {
-  verylightBlue: '#ABCDEF',
-  mainOrange: 'mistyrose',
+  mainPink: '#ffb6c1',
+  mainText: '#ffffff',
+  mainBoton: '#d3d3d3',
+  borderBoton: '#dda0dd',
 };

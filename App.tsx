@@ -1,26 +1,28 @@
 import React from 'react';
 import { Alert, Image, StyleSheet, Text, View } from 'react-native';
 
-import { DefaultButton } from './src/components';
+import { DefaultBotton } from './src/components';
 
 import { colors } from './src/utils/theme';
 import { DEVICE_WIDTH } from './src/utils/dimensions';
 
 const showAlert = () => {
-  Alert.alert('Hola!');
+  Alert.alert('Título', 'Licenciada en Analisis de Sistemas');
 };
 
 const App = () => {
   return (
     <View style={styles.mainContainer}>
-      <Text style={styles.title}>Título</Text>
-      <Text>Subtitulo</Text>
+      <Text style={styles.title}>LAURA MURILLO</Text>
       <Image
-        source={{ uri: 'https://reactnative.dev/img/tiny_logo.png' }}
-        style={styles.image}
+        style={styles.logo}
         resizeMode="contain"
+        source={{
+          uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgTmNUH9WwaxR9MplaF9ko2Z3rWkTiGYwDGR0kMKeZ7zr7adktK0aiQgJmMb_lVBk0m84&usqp=CAU',
+        }}
       />
-      <DefaultButton onPress={showAlert} />
+      <Text style={styles.subtitle}>Team Leader</Text>
+      <DefaultBotton onPress={showAlert} />
     </View>
   );
 };
@@ -28,21 +30,27 @@ const App = () => {
 const styles = StyleSheet.create({
   mainContainer: {
     alignItems: 'center',
-    backgroundColor: colors.verylightBlue,
+    backgroundColor: colors.mainPink,
     flex: 1,
     justifyContent: 'center',
     width: '100%',
   },
   title: {
-    color: colors.mainOrange,
+    color: colors.mainText,
     fontSize: 30,
     fontWeight: 'bold',
-    fontStyle: 'italic',
     marginBottom: 10,
   },
-  image: {
-    aspectRatio: 1,
-    minHeight: 100,
+  subtitle: {
+    color: colors.mainText,
+    fontSize: 20,
+    fontStyle: 'italic',
+    marginTop: 15,
+    marginBottom: 15,
+  },
+  logo: {
+    minHeight: 170,
+    marginTop: 15,
     width: DEVICE_WIDTH * 0.5,
   },
 });
