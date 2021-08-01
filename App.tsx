@@ -7,7 +7,7 @@ import { colors } from './src/utils/theme';
 import { DEVICE_WIDTH } from './src/utils/dimensions';
 
 const showAlert = () => {
-  Alert.alert('Título', 'Licenciada en Analisis de Sistemas');
+  Alert.alert('Títulos', 'Nada');
 };
 
 const App = () => {
