@@ -10,9 +10,9 @@ const styles = StyleSheet.create({
     borderColor: colors.borderBoton,
     borderRadius: 10,
     color: 'blue',
-    height: 40,
+    height: 50,
     justifyContent: 'center',
-    width: '30%',
+    width: '50%',
   },
 });
 

@@ -1,6 +1,6 @@
 export const colors = {
   mainPink: '#ffb6c1',
   mainText: '#ffffff',
-  mainBoton: '#d3d3d3',
+  mainBoton: '#dda0dd',
   borderBoton: '#dda0dd',
 };
