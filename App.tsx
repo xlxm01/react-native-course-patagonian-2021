@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import { Image, Modal, StyleSheet, Text, View } from 'react-native';
 
 import { DefaultBotton } from './src/components';
+import Typography from './src/components/Typography';
 
 import { colors } from './src/utils/theme';
 import { DEVICE_WIDTH } from './src/utils/dimensions';
+
 
 /* const showAlert = () => {
   Alert.alert('Título', 'Licenciada en Analisis de Sistemas');
@@ -50,6 +52,7 @@ const App = () => {
         </View>
       </Modal>
       <Text style={styles.title}>LAURA MURILLO</Text>
+      <Typography> Subtirulo </Typography>
       <Image
         style={styles.logo}
         resizeMode="contain"
