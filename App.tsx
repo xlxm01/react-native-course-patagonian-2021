@@ -52,7 +52,7 @@ const App = () => {
         </View>
       </Modal>
       <Text style={styles.title}>LAURA MURILLO</Text>
-      <Typography> Subtirulo </Typography>
+      <Typography> Team Leader </Typography>
       <Image
         style={styles.logo}
         resizeMode="contain"
