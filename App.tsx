@@ -7,7 +7,6 @@ import Typography from './src/components/Typography';
 import { colors } from './src/utils/theme';
 import { DEVICE_WIDTH } from './src/utils/dimensions';
 
-
 /* const showAlert = () => {
   Alert.alert('Título', 'Licenciada en Analisis de Sistemas');
 }; */
@@ -35,6 +34,7 @@ const App = () => {
             justifyContent: 'center',
           }}
         >
+
           <View
             style={{
               alignItems: 'center',
@@ -47,12 +47,12 @@ const App = () => {
             }}
           >
             <Text style={{ marginVertical:20}}>Licenciada en Analisis de Sistemas</Text>
-            <DefaultBotton onPress={hideModal} text="OK" />
+            <DefaultBotton text="OK" onPress={hideModal} />
           </View>
+
         </View>
       </Modal>
       <Text style={styles.title}>LAURA MURILLO</Text>
-      <Typography> Team Leader </Typography>
       <Image
         style={styles.logo}
         resizeMode="contain"
@@ -61,6 +61,7 @@ const App = () => {
         }}
       />
       <Text style={styles.subtitle}>Team Leader</Text>
+      <Typography> Team Leader </Typography>
       <DefaultBotton text="Mas Info" onPress={showModal} textSize={14} />
     </View>
   );

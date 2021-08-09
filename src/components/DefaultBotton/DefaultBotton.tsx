@@ -18,7 +18,7 @@ const DefaultBotton = ({ additionalStyle, onPress, text, textSize }: Props) => {
     </TouchableOpacity>
   );
 };
-
+// Define propiedades por defecto
 DefaultBotton.defaultProps = {
   additionalStyle: {},
   textSize: 12,
