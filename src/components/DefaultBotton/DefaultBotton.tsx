@@ -25,7 +25,7 @@ const DefaultBotton = ({ additionalStyle, color, onPress, text, textSize }: Prop
     </TouchableOpacity>
   );
 };
-// Define propiedades por defecto
+// Define propiedades por defecto buenas practicas
 DefaultBotton.defaultProps = {
   additionalStyle: {},
   color: colors.mainBoton,

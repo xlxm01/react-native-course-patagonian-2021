@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react';
 import { Text } from 'react-native';
 
 //import {colors} from '../../colors/themes';
-import {IOS_ANDROID} from '../../../utils/constants.ts';
+//import { IOS_ANDROID } from '../../../utils/constants.ts';
 
 interface Props {
   align: 'left' | 'center' | 'rigth' | 'justify';
@@ -19,21 +19,19 @@ const typographyVariant = {
   regular: 'Raleway-Regular',
 };
 
-const getTextStyle = ({ align, color, size, variant }: Props) => {
+/* const getTextStyle = ({ align, color, size }: Props) => {
   const textStyle = {
     color,
     fontSize: size,
     textAlign: align,
-    fontFamily: typographyVariant[variant],
+    //fontFamily: typographyVariant[variant],
   };
   return textStyle;
-}
+};*/
 
-const Typography = ({ align, color, children, size, variant }: Props) => {
-  const textStyle = getTextStyle({ align, color, size, variant });
-  return <Text style={textStyle}>{children}</Text>;
+const Typography = ({ children }: Props) => {
+  //const textStyle = getTextStyle({ align, color, size });
+  return <Text>{children}</Text>;
 };
-
-
 
 export default Typography;

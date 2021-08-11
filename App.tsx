@@ -32,7 +32,6 @@ const App = () => {
             justifyContent: 'center',
           }}
         >
-
           <View
             style={{
               alignItems: 'center',
@@ -44,10 +43,9 @@ const App = () => {
               width: '65%',
             }}
           >
-            <Text style={{ marginVertical:20}}>Licenciada en Analisis de Sistemas</Text>
+            <Text style={{ marginVertical: 20 }}>Licenciada en Analisis de Sistemas</Text>
             <DefaultBotton text="OK" onPress={hideModal} />
           </View>
-
         </View>
       </Modal>
       <Text style={styles.title}>LAURA MURILLO</Text>
