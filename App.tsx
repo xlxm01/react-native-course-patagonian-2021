@@ -7,9 +7,7 @@ import Typography from './src/components/Typography';
 import { colors } from './src/utils/theme';
 import { DEVICE_WIDTH } from './src/utils/dimensions';
 
-/* const showAlert = () => {
-  Alert.alert('Título', 'Licenciada en Analisis de Sistemas');
-}; */
+//const arr = Array.from({ length:6 })
 
 const App = () => {
   const [isModalVisible, setModalVisible] = useState(false);
