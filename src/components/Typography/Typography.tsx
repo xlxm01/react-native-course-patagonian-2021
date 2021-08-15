@@ -34,6 +34,4 @@ const Typography = ({ align, color, children, size, variant }: Props) => {
   return <Text style={textStyle}>{children}</Text>;
 };
 
-
-
 export default Typography;
