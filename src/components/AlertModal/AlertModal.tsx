@@ -1,8 +1,9 @@
 import React from 'react';
-import { Modal, Text, View } from 'react-native';
+import { Modal, View } from 'react-native';
 
 // regla: cuando uno importa un componente dentro de otro hay que hacerlo a la carpeta
 import DefaultBotton from '../DefaultBotton';
+import Typography from '../Typography';
 import styles from './styles';
 
 interface Props {
@@ -25,7 +26,10 @@ const AlertModal = ({
   <Modal animationType="fade" transparent visible={visible}>
     <View style={[styles.mainContainer]}>
       <View style={[styles.innerAlert]}>
-        <Text style={[styles.text]}>{message}</Text>
+        {/* <Text style={[styles.text]}>{message}</Text> */}
+        <View style={[styles.text]}>
+          <Typography >{message}</Typography>
+        </View>
         <DefaultBotton
           additionalStyle={styles.button}
           onPress={onPressPrimaryButton}

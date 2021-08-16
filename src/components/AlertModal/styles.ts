@@ -1,7 +1,7 @@
 //importo el componente de estilos de ract-native
 import { StyleSheet } from 'react-native';
 //importo las constantes de colores definidos para el proyecto
-import { colors } from "../../utils/theme";
+import { colors } from '../../utils/theme';
 
 const styles = StyleSheet.create({
   mainContainer: {
@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
   },
   innerAlert: {
     alignItems: 'center',
-    backgroundColor: '#ffffff',
+    backgroundColor: colors.white,
     borderRadius: 15,
     justifyContent: 'center',
     paddingBottom: 20,

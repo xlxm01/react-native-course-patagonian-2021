@@ -1,6 +1,7 @@
 import React from 'react';
-import { TouchableOpacity, Text, ViewStyle } from 'react-native';
+import { TouchableOpacity, ViewStyle } from 'react-native';
 import { colors } from '../../utils/theme';
+import Typography from '../Typography';
 
 import styles, { buttonTextColors } from './styles';
 
@@ -31,7 +32,16 @@ const DefaultBotton = ({
     >
       {/* Cada vez que le llegue algo en textSize va a tener que recalcular
       no importa que sea lo mismo, si fuera algo fijo como fontSize: 10 estaría mal */}
-      <Text style={{ color: buttonTextColors[variant] || colors.white, fontSize: textSize }}> {text} </Text>
+      {/* <Text style={{ color: buttonTextColors[variant] || colors.white, fontSize: textSize }}>
+        {text}
+      </Text> */}
+      <Typography
+        color={buttonTextColors[variant] || colors.white}
+        size={textSize}
+        variant="medium"
+      >
+        {text}
+      </Typography>
     </TouchableOpacity>
   );
 };

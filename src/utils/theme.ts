@@ -5,4 +5,5 @@ export const colors = {
   borderBoton: '#dda0dd',
   mainOrange: '#ffa07a',
   white: '#fffff0',
+  black: '#000000',
 };

@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
-import { Image, StyleSheet, Text, View } from 'react-native';
+import { Image, StyleSheet, View } from 'react-native';
 
-import { DefaultBotton } from './src/components';
-//import Typography from './src/components/Typography';
+import { AlertModal, DefaultBotton, Typography } from './src/components';
 
 import { colors } from './src/utils/theme';
 import { DEVICE_WIDTH } from './src/utils/dimensions';
-import AlertModal from 'src/components/AlertModal';
 
 //const arr = Array.from({ length:6 })
 
@@ -25,7 +23,9 @@ const App = () => {
   return (
     //View es como div, modal es un componente q se pone encima de la pantalla//
     <View style={styles.mainContainer}>
-      <Text style={styles.title}>LAURA MURILLO</Text>
+      <Typography color={colors.mainText} size={30} variant="bold">
+        LAURA MURILLO
+      </Typography>
       <Image
         resizeMode="contain"
         style={styles.logo}
@@ -33,8 +33,9 @@ const App = () => {
           uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgTmNUH9WwaxR9MplaF9ko2Z3rWkTiGYwDGR0kMKeZ7zr7adktK0aiQgJmMb_lVBk0m84&usqp=CAU',
         }}
       />
-      <Text style={styles.subtitle}>Team Leader</Text>
-      {/* <Typography> Team Leader </Typography> */}
+      <Typography color={colors.mainText} size={20} variant="medium">
+        Team Leader
+      </Typography>
       <DefaultBotton
         color={colors.mainBoton} // este color va a sobreescribir cualquier color que uno le mande, incluso en el aditional styles
         //additionalStyle={styles.button}
@@ -48,7 +49,7 @@ const App = () => {
         onPressPrimaryButton={hideModal}
         primaryButtonText="Ok"
         onPressSecondaryButton={hideModal}
-        secondaryButton="Cancel"
+        secondaryButtonText="Cancel"
         visible={isModalVisible}
       />
     </View>
@@ -64,15 +65,9 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   title: {
-    color: colors.mainText,
-    fontSize: 30,
-    fontWeight: 'bold',
     marginBottom: 10,
   },
   subtitle: {
-    color: colors.mainText,
-    fontSize: 20,
-    fontStyle: 'italic',
     marginTop: 15,
     marginBottom: 15,
   },

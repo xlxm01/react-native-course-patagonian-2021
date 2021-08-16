@@ -1,3 +1,3 @@
-import DefaultBotton from "./Typography";
+import Typography from './Typography';
 
-export default DefaultBotton;
+export default Typography;
