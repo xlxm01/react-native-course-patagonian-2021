@@ -1,55 +1,30 @@
 import React, { useState } from 'react';
-import { Image, Modal, StyleSheet, Text, View } from 'react-native';
+import { Image, StyleSheet, Text, View } from 'react-native';
 
 import { DefaultBotton } from './src/components';
 //import Typography from './src/components/Typography';
 
 import { colors } from './src/utils/theme';
 import { DEVICE_WIDTH } from './src/utils/dimensions';
+import AlertModal from 'src/components/AlertModal';
 
 //const arr = Array.from({ length:6 })
 
 const App = () => {
+  //Inicia el hook (mostrar un estado inmutable en una vble no se modifica sin importar lo que suceda con el componente)
+  //- 1ra vble dele stado, 2do funcion q setea el state, false: es el estado inicial
   const [isModalVisible, setModalVisible] = useState(false);
-
+  // una funcion para mostrar
   const showModal = () => {
     setModalVisible(true);
   };
-
   const hideModal = () => {
     setModalVisible(false);
   };
-
+  // termina el hook
   return (
+    //View es como div, modal es un componente q se pone encima de la pantalla//
     <View style={styles.mainContainer}>
-      <Modal animationType="fade" transparent visible={isModalVisible}>
-        <View
-          style={{
-            alignItems: 'center',
-            backgroundColor: 'rgba(0,0,0,0.2)',
-            flex: 1,
-            width: '100%',
-            justifyContent: 'center',
-          }}
-        >
-
-          <View
-            style={{
-              alignItems: 'center',
-              backgroundColor: '#ffffff',
-              borderRadius: 15,
-              justifyContent: 'center',
-              paddingBottom: 20,
-              paddingTop: 10,
-              width: '65%',
-            }}
-          >
-            <Text style={{ marginVertical:20}}>Licenciada en Analisis de Sistemas</Text>
-            <DefaultBotton text="OK" onPress={hideModal} />
-          </View>
-
-        </View>
-      </Modal>
       <Text style={styles.title}>LAURA MURILLO</Text>
       <Image
         resizeMode="contain"
@@ -66,6 +41,15 @@ const App = () => {
         text="Mas Info"
         onPress={showModal}
         textSize={22}
+        variant="primary"
+      />
+      <AlertModal
+        message={'Licenciada en Analisis de Sistemas'}
+        onPressPrimaryButton={hideModal}
+        primaryButtonText="Ok"
+        onPressSecondaryButton={hideModal}
+        secondaryButton="Cancel"
+        visible={isModalVisible}
       />
     </View>
   );

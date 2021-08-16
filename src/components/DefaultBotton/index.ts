@@ -1,3 +1,3 @@
-import DefaultBotton from "./DefaultBotton"
+import DefaultBotton from "./DefaultBotton";
 
 export default DefaultBotton;
