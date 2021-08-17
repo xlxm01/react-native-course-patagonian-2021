@@ -67,3 +67,31 @@ Estructura
       constants.ts : con vbles globales del Sistema Operativo del dispositivo
       dimensions.ts : con vbles globales de tamaño del dispositivo
       theme.ts : con los colores de la app
+
+Instalar y configurar el Husky.
+------------------------------
+
+1. Instalar las dependencias
+
+  npm install husky@3.0.9 --save-dev
+  npm install lint-staged --save-dev
+
+
+2. Agregar el siguiente comando dentro de la sección de "scripts" en el package.json
+
+"check-ts": "tsc --watch --noEmit --skipLibCheck"
+
+
+3. Agregamos las siguientes configuraciones dentro del package.json
+
+"husky": {
+    "hooks": {
+      "pre-commit": "tsc --noEmit --skipLibCheck && lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json}": [
+      "prettier \"src/**/*.{js,jsx,json,tsx,ts}\" --write",
+      "eslint '*/**/*.{js,ts,tsx}' --quiet --fix"
+    ]
+  },
