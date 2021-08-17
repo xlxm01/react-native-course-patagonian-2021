@@ -56,6 +56,31 @@ con el sgte codigo /* module.exports = {
 4. Ejecutar npx react-native link
 
 * React-Navigation
+Instalar con
+  npm install @ react-navigation / native
+  npm install react-native-screens react-native-safe-area-context
+Para Android:
+  Android/app/src/main/java/com/cursopatagonian...
+  En el archivo
+          MainActivity.java
+
+  Agregar
+        import android.os.Bundle;
+          @Override
+          protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(null);
+          }
+  Ultimo
+    npm install @react-navigation/native-stack
+
+ Ir a ios/cursopatagonian/AppDelegate.m
+ y Agregar
+        #if RCT_DEV
+          #import <React/RCTDevLoadingView.h>
+        #endif
+y #if RCT_DEV
+    [bridge moduleForClass:[RCTDevLoadingView class]];
+  #endif
 
 Estructura
 ----------
@@ -95,3 +120,4 @@ Instalar y configurar el Husky.
       "eslint '*/**/*.{js,ts,tsx}' --quiet --fix"
     ]
   },
+
