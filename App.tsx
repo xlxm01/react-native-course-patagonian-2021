@@ -24,7 +24,7 @@ const App = () => {
   return (
     <>
       <SafeAreaView style={{ backgroundColor: colors.mainPink }} />
-      <ScrollView style={{ flex: 1, width: '100%' }}>
+      <ScrollView style={{ backgroundColor: colors.mainPink, flex: 1, width: '100%' }}>
         <View style={styles.mainContainer}>
           <Typography color={colors.mainText} size={30} variant="bold">
             LAURA MURILLO
@@ -95,23 +95,16 @@ const styles = StyleSheet.create({
     backgroundColor: colors.mainPink,
     flex: 1,
     justifyContent: 'center',
+    paddingBottom: 30, //medida estandar
     width: '100%',
   },
-  title: {
-    marginBottom: 10,
-  },
   subtitle: {
-    marginTop: 15,
     marginBottom: 15,
   },
   logo: {
-    minHeight: 170,
     marginTop: 15,
+    minHeight: 170,
     width: DEVICE_WIDTH * 0.5,
-  },
-  button: {
-    backgroundColor: 'green',
-    width: 50,
   },
 });
 

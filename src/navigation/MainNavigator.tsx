@@ -1,5 +1,5 @@
 import React from 'react';
-const { createNativeStackNavigator } = require('@react-navigation/bottom-tabs');
+const { createNativeStackNavigator } = require('@react-navigation/native-stack');
 
 import AuthStack from './AuthStack';
 import TabNavigator from './TabNavigator';

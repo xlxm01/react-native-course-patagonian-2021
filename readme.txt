@@ -5,7 +5,7 @@ Components de React
 
 - SafeAreaView:
 
-- ScrollView: Es un contenedor de todo lo que renderizamos, para poder desplazar la barra
+- ScrollView: Es un contenedor de todo lo que queremos que se pueda deslizar o scrollear, para poder desplazar la barra.
 
 - StyleSheet: Es para definir los estilos del proyecto.
 
