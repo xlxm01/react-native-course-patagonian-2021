@@ -5,28 +5,32 @@ import { colors } from '../../utils/theme';
 
 const styles = StyleSheet.create({
   horizontalContainer: {
-    flexDirection: 'row',
+    flexDirection: 'row', // para que la disposicion sea horizoantal
     justifyContent: 'center',
     width: '100%',
-  },
-  image: {
-    aspectRatio: 1,
-    minHeight: 50,
-    width: DEVICE_WIDTH * 0.3,
   },
   mainContainer: {
     alignItems: 'center',
-    backgroundColor: colors.lightBlue,
+    backgroundColor: colors.mainPink,
     flex: 1,
     justifyContent: 'center',
-    paddingBottom: 30,
+    paddingBottom: 30, //medida estandar
     width: '100%',
   },
+  subtitle: {
+    marginBottom: 15,
+  },
+  logo: {
+    aspectRatio: 1,
+    //marginTop: 15,
+    minHeight: 170,
+    width: DEVICE_WIDTH * 0.5,
+  },
   safeArea: {
-    backgroundColor: colors.lightBlue,
+    backgroundColor: colors.mainPink,
   },
   scrollView: {
-    backgroundColor: colors.lightBlue,
+    backgroundColor: colors.mainOrange,
     flex: 1,
     width: '100%',
   },

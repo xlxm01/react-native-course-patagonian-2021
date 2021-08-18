@@ -6,4 +6,5 @@ export const colors = {
   mainOrange: '#ffa07a',
   white: '#fffff0',
   black: '#000000',
+  lightBlue: '#f0f8ff',
 };

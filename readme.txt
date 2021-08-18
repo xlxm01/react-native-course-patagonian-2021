@@ -85,13 +85,17 @@ y #if RCT_DEV
 Estructura
 ----------
 1. src/ assets/ fonts : con las fuentes del proyecto
-2. src/ components : los ocmponentes creados para nuestro proyecto
+2. src/ components : los ocmponentes creados para nuestro proyecto. Tiene un index
 3. src/ navigation :
 4. src/ screens :
 5. src/ utils: Defino archivos
       constants.ts : con vbles globales del Sistema Operativo del dispositivo
       dimensions.ts : con vbles globales de tamaño del dispositivo
-      theme.ts : con los colores de la app
+      theme.ts : con los colores de la app.
+6. src/screens:Tiene index.
+  y una carpeta por cada componente de una screens
+
+Nota: las carpetas nop deben parecerse al flujo de navegacion.
 
 Instalar y configurar el Husky.
 ------------------------------
