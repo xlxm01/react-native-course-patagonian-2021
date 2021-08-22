@@ -53,6 +53,7 @@
 	<false/>
 	<key>UIAppFonts</key>
 	<array>
+    <string>MaterialIcons.ttf</string>
 		<string>Raleway-Bold.ttf</string>
 		<string>Raleway-Italic.ttf</string>
 		<string>Raleway-Medium.ttf</string>
@@ -60,3 +61,11 @@
 	</array>
 </dict>
 </plist>
+
+3. Se puede buscar los icinos por nombre aqui
+   https://oblador.github.io/react-native-vector-icons/
+
+4.Edit android/app/build.gradle ( NOT android/build.gradle ) and add the following:
+
+    apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
+

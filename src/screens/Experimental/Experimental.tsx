@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Image, SafeAreaView, ScrollView, View } from 'react-native';
+import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 
 import { AlertModal, DefaultBotton, Separator, Typography } from '../../components';
 import styles from './styles';
@@ -30,6 +31,7 @@ const ExperimentalScreen = () => {
             LAURA MURILLO
           </Typography>
           <Separator size={10} />
+          <MaterialIcon name="search" size={30} color={colors.mainOrange} />
           {/* recorro el array y mapeo por cada iteracion que retorne este componente view
           parametro key cuanod son elementos iguales no los distingue, si alguno de ellos actualiza, causara q
           todos se actualicen. Le easignamos una key unica para identificar a cada uno*/}

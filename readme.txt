@@ -87,6 +87,7 @@ Estructura
 1. src/ assets/ fonts : con las fuentes del proyecto
 2. src/ components : los ocmponentes creados para nuestro proyecto. Tiene un index
 3. src/ navigation :
+    MainNavigator.tsx
 4. src/ screens :
 5. src/ utils: Defino archivos
       constants.ts : con vbles globales del Sistema Operativo del dispositivo
@@ -119,9 +120,58 @@ Instalar y configurar el Husky.
     }
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx,json}": [
+    "*.{js,jsx,ts,tsx,json}" : [
       "prettier \"src/**/*.{js,jsx,json,tsx,ts}\" --write",
       "eslint '*/**/*.{js,ts,tsx}' --quiet --fix"
     ]
   },
+
+ICONOS
+------
+
+1. Instalar la libreria
+  npm install --save react-native-vector-icons
+  npm i -D @types/react-native-vector-icons
+opcion con COCOA PODS
+
+2. List of all available fonts to copy & paste in Info.plist
+
+<string>MaterialIcons.ttf</string>
+
+3. Agregar estas lineas a build.gradle en anroid/app
+
+project.ext.vectoricons = [
+    iconFontNames: [ 'MaterialIcons.ttf' ] // Name of the font files you want to copy
+]
+apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
+
+Nota: Si la app funciono esta bien!
+
+Buenas Practicas
+----------------
+
+1. Respecto a como importar - import
+Importar de manera consistente primero las librerias de react
+luego las librerias externas
+etc
+
+2. Respecto a las tabs (iconos de abajo)
+Un solo tab no t iene sentido
+2 o hasta 4 esta bien
+si son 5 hay que esconder el titulo de la tab
+
+TIPS
+----
+
+1. En proyectos reales de la industris:
+No usar los header de react navigator, en lo posible. Ni de cualquier navegacion. Son bonitos
+se acomodan automaticamente, etcProblema son librerias q se mantienen actualizando mucho, cambian muchas cosas,
+entre menos fictures use de cada libreria es mejor
+asi el pryecto queda mas desacoplado e independiente de la libreria misma.
+
+2. Que se evalua en las pruebas tecniocas
+- Que tan limpio es el codigo
+- Estructura
+- Buenas Practicas estan siguiendo y cuales no
+- Errores
 
