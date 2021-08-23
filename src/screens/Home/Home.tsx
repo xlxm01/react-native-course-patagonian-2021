@@ -1,5 +1,5 @@
-import React from "react";
-import { View } from "react-native";
+import React from 'react';
+import { View } from 'react-native';
 
 import { Typography } from '../../components';
 
@@ -10,7 +10,7 @@ const HomeScreen = () => {
     <View style={styles.mainContainer}>
       <Typography> Home Screen </Typography>
     </View>
-  ),
+  );
 };
 
 export default HomeScreen;

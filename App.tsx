@@ -1,5 +1,5 @@
 import React from 'react';
-const { NavigationContainer } = requiere('@react-navigation/native');
+const { NavigationContainer } = require('@react-navigation/native');
 
 import MainNavigator from './src/navigation/MainNavigator';
 

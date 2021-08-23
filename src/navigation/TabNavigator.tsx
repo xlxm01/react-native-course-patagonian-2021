@@ -1,7 +1,6 @@
 import React from 'react';
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 import { RouteProp } from '@react-navigation/native';
-
 const { createBottomTabNavigator } = require('@react-navigation/bottom-tabs');
 
 import { HistoryScreen, HomeScreen } from '../screens';
@@ -12,11 +11,6 @@ type Route = RouteProp<Record<string, object | undefined>, string>; //esta en la
 
 const Tab = createBottomTabNavigator();
 
-const iconNames = {
-  HomeTab: 'home',
-  HistoryTab: 'history',
-};
-
 const getIconName = (routeName: string) => {
   let iconName = '';
   switch (routeName) {
@@ -24,10 +18,10 @@ const getIconName = (routeName: string) => {
       iconName = 'home';
       break;
     case 'HistoryTab':
-      iconName = 'help-outline';
+      iconName = 'history';
       break;
     default:
-      iconName = '';
+      iconName = 'help-outline';
       break;
   }
 
@@ -36,7 +30,6 @@ const getIconName = (routeName: string) => {
 
 const navigatorScreenOptions = ({ route }: { route: Route }) => ({
   tabBarIcon: ({ focused, color, size }: { focused: boolean; color: string; size: number }) => {
-    console.log('///Route name ///', route.name);
     const iconName = getIconName(route.name);
     const iconSize = focused ? size * 1.2 : size;
     return <MaterialIcon name={iconName} size={iconSize} color={color} />;

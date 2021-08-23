@@ -1,3 +1,3 @@
-export {default as ExperimentalScreen} from './Experimental';
+import HomeScreen from './Home';
 
-//export{ default as HomeScren}
+export default HomeScreen;
